@@ -35,7 +35,7 @@ public class CodeGenerator {
 	// JDBC配置，请修改为你项目的实际配置
 	// private static final String JDBC_URL =
 	// "jdbc:mysql://localhost:3306/yeetong_db?useSSL=false";
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/yeetong_todo?useSSL=false";
+	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/yeetong_zhny?useSSL=false";
 	private static final String JDBC_USERNAME = "root";
 	private static final String JDBC_PASSWORD = "123456";
 	private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
@@ -55,11 +55,92 @@ public class CodeGenerator {
 	private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());// @date
 
 	public static void main(String[] args) {
-		genCodeByCustomModelName("td_plan", "TdPlan", "todo");
-		genCodeByCustomModelName("td_token", "TdToken", "todo");
-		genCodeByCustomModelName("td_user", "TdUser", "todo");
-		genCodeByCustomModelName("td_user_like", "TdUserLike", "todo");
-		genCodeByCustomModelName("td_user_wx", "TdUserWx", "todo");
+		// TODO计划
+//		genCodeByCustomModelName("td_plan", "TdPlan", "todo");
+//		genCodeByCustomModelName("td_token", "TdToken", "todo");
+//		genCodeByCustomModelName("td_user", "TdUser", "todo");
+//		genCodeByCustomModelName("td_user_like", "TdUserLike", "todo");
+//		genCodeByCustomModelName("td_user_wx", "TdUserWx", "todo");
+		
+		
+		// 智慧农场
+		genCodeByCustomModelName("smart_culture_alarm_conf", "SmartCultureAlarmConf", "zn");
+		genCodeByCustomModelName("smart_culture_alarm_push_record", "SmartCultureAlarmPushRecord", "zn");
+		genCodeByCustomModelName("smart_culture_basic_city", "SmartCultureBasicCity", "zn");
+		genCodeByCustomModelName("smart_culture_client_activation", "SmartCultureClientActivation", "zn");
+		genCodeByCustomModelName("smart_culture_equipment", "SmartCultureEquipment", "zn");
+		genCodeByCustomModelName("smart_culture_equipment_model", "SmartCultureEquipmentModel", "zn");
+		genCodeByCustomModelName("smart_culture_equipment_outline_receive", "SmartCultureEquipmentOutlineReceive", "zn");
+		genCodeByCustomModelName("smart_culture_equipment_outline_res", "SmartCultureEquipmentOutlineRes", "zn");
+		genCodeByCustomModelName("smart_culture_equipment_type", "SmartCultureEquipmentType", "zn");
+		genCodeByCustomModelName("smart_culture_farm", "SmartCultureFarm", "zn");
+		genCodeByCustomModelName("smart_culture_farm_area", "SmartCultureFarmArea", "zn");
+		genCodeByCustomModelName("smart_culture_farm_func", "SmartCultureFarmFunc", "zn");
+		genCodeByCustomModelName("smart_culture_farm_map_area", "SmartCultureFarmMapArea", "zn");
+		genCodeByCustomModelName("smart_culture_farm_map_area_style", "SmartCultureFarmMapAreaStyle", "zn");
+		genCodeByCustomModelName("smart_culture_farm_pic", "SmartCultureFarmPic", "zn");
+		genCodeByCustomModelName("smart_culture_farm_raise_apply", "SmartCultureFarmRaiseApply", "zn");
+		genCodeByCustomModelName("smart_culture_feed", "SmartCultureFeed", "zn");
+		// 智慧农场
+//		genCodeByCustomModelName("smart_culture_feed_pic", "SmartCulture_feed_pic", "zn");
+//		genCodeByCustomModelName("smart_culture_feed_tag", "SmartCulture_feed_tag", "zn");
+//		genCodeByCustomModelName("smart_culture_hls_control", "SmartCulture_hls_control", "zn");
+//		genCodeByCustomModelName("smart_culture_hls_control_his", "SmartCulture_hls_control_his", "zn");
+//		genCodeByCustomModelName("smart_culture_hls_status", "SmartCulture_hls_status", "zn");
+//		genCodeByCustomModelName("smart_culture_hly_current", "SmartCulture_hly_current", "zn");
+//		genCodeByCustomModelName("smart_culture_hly_his", "SmartCulture_hly_his", "zn");
+//		genCodeByCustomModelName("smart_culture_inspection", "SmartCulture_inspection", "zn");
+//		genCodeByCustomModelName("smart_culture_inspection_pic", "SmartCulture_inspection_pic", "zn");
+//		genCodeByCustomModelName("smart_culture_inspection_point", "SmartCulture_inspection_point", "zn");
+//		genCodeByCustomModelName("smart_culture_inspection_point_check_item", "SmartCulture_inspection_point_check_item", "zn");
+//		genCodeByCustomModelName("smart_culture_inspection_res", "SmartCulture_inspection_res", "zn");
+//		genCodeByCustomModelName("smart_culture_layeggs", "SmartCulture_layeggs", "zn");
+//		genCodeByCustomModelName("smart_culture_layeggs_pic", "SmartCulture_layeggs_pic", "zn");
+//		genCodeByCustomModelName("smart_culture_menu", "SmartCulture_menu", "zn");
+//		genCodeByCustomModelName("smart_culture_message_centre", "SmartCulture_message_centre", "zn");
+//		genCodeByCustomModelName("smart_culture_moa_ap_type", "SmartCulture_moa_ap_type", "zn");
+//		genCodeByCustomModelName("smart_culture_moa_wpap_200dzs", "SmartCulture_moa_wpap_200dzs", "zn");
+//		genCodeByCustomModelName("smart_culture_moa_wpap_200mzs", "SmartCulture_moa_wpap_200mzs", "zn");
+//		genCodeByCustomModelName("smart_culture_moa_wpap_month", "SmartCulture_moa_wpap_month", "zn");
+//		genCodeByCustomModelName("smart_culture_moa_wpap_week", "SmartCulture_moa_wpap_week", "zn");
+//		genCodeByCustomModelName("smart_culture_monitor_term", "SmartCulture_monitor_term", "zn");
+//		genCodeByCustomModelName("smart_culture_organize", "SmartCulture_organize", "zn");
+//		genCodeByCustomModelName("smart_culture_poultry", "SmartCulture_poultry", "zn");
+//		genCodeByCustomModelName("smart_culture_poultry_res", "SmartCulture_poultry_res", "zn");
+//		genCodeByCustomModelName("smart_culture_poultry_type", "SmartCulture_poultry_type", "zn");
+//		genCodeByCustomModelName("smart_culture_poultry_vaccination", "SmartCulture_poultry_vaccination", "zn");
+//		genCodeByCustomModelName("smart_culture_poultry_variety", "SmartCulture_poultry_variety", "zn");
+//		genCodeByCustomModelName("smart_culture_single_sensor_current", "SmartCulture_single_sensor_current", "zn");
+//		genCodeByCustomModelName("smart_culture_single_sensor_his", "SmartCulture_single_sensor_his", "zn");
+//		genCodeByCustomModelName("smart_culture_sms", "SmartCulture_sms", "zn");
+//		genCodeByCustomModelName("smart_culture_system_dict", "SmartCulture_system_dict", "zn");
+//		genCodeByCustomModelName("smart_culture_system_dict_val", "SmartCulture_system_dict_val", "zn");
+//		genCodeByCustomModelName("smart_culture_system_func", "SmartCulture_system_func", "zn");
+//		genCodeByCustomModelName("smart_culture_system_func_description", "SmartCulture_system_func_description", "zn");
+//		genCodeByCustomModelName("smart_culture_system_func_platform", "SmartCulture_system_func_platform", "zn");
+//		genCodeByCustomModelName("smart_culture_system_func_platform_pic", "SmartCulture_system_func_platform_pic", "zn");
+//		genCodeByCustomModelName("smart_culture_system_message", "SmartCulture_system_message", "zn");
+//		genCodeByCustomModelName("smart_culture_system_message_push_record", "SmartCulture_system_message_push_record", "zn");
+//		genCodeByCustomModelName("smart_culture_system_order", "SmartCulture_system_order", "zn");
+//		genCodeByCustomModelName("smart_culture_user", "SmartCulture_user", "zn");
+//		genCodeByCustomModelName("smart_culture_user_farm", "SmartCulture_user_farm", "zn");
+//		genCodeByCustomModelName("smart_culture_user_identity", "SmartCulture_user_identity", "zn");
+//		genCodeByCustomModelName("smart_culture_user_member_score", "SmartCulture_user_member_score", "zn");
+//		genCodeByCustomModelName("smart_culture_user_member_score_res", "SmartCulture_user_member_score_res", "zn");
+//		genCodeByCustomModelName("smart_culture_user_menu", "SmartCulture_user_menu", "zn");
+//		genCodeByCustomModelName("smart_culture_user_mp_dailypush_res", "SmartCulture_user_mp_dailypush_res", "zn");
+//		genCodeByCustomModelName("smart_culture_user_mp_template_scene", "SmartCulture_user_mp_template_scene", "zn");
+//		genCodeByCustomModelName("smart_culture_user_signin_res", "SmartCulture_user_signin_res", "zn");
+//		genCodeByCustomModelName("smart_culture_user_token", "SmartCulture_user_token", "zn");
+//		genCodeByCustomModelName("smart_culture_user_signin_res", "SmartCulture_user_signin_res", "zn");
+//		genCodeByCustomModelName("smart_culture_user_weixin", "SmartCulture_user_weixin", "zn");
+//		genCodeByCustomModelName("smart_culture_user_weixin_scan", "SmartCulture_user_weixin_scan", "zn");
+//		genCodeByCustomModelName("smart_culture_video", "SmartCulture_video", "zn");
+//		genCodeByCustomModelName("smart_culture_weather_city", "SmartCulture_weather_city", "zn");
+//		genCodeByCustomModelName("smart_culture_weather_history", "SmartCulture_weather_history", "zn");
+//		genCodeByCustomModelName("smart_culture_weather_now", "SmartCulture_weather_now", "zn");
+//		genCodeByCustomModelName("smart_culture_weather_sunrise", "SmartCulture_weather_sunrise", "zn");
+		
 	}
 
 	/**

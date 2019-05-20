@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yeetong.rpc.service.dao.zn.SmartCultureFarmFuncMapper">
+  <resultMap id="BaseResultMap" type="org.yeetong.rpc.service.model.SmartCultureFarmFunc">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="res_id" jdbcType="VARCHAR" property="resId" />
+    <result column="farm_id" jdbcType="VARCHAR" property="farmId" />
+    <result column="func_id" jdbcType="VARCHAR" property="funcId" />
+    <result column="platform_type" jdbcType="VARCHAR" property="platformType" />
+    <result column="func_platform_id" jdbcType="VARCHAR" property="funcPlatformId" />
+    <result column="gain_type" jdbcType="CHAR" property="gainType" />
+    <result column="gain_illustrate" jdbcType="VARCHAR" property="gainIllustrate" />
+    <result column="buy_order_id" jdbcType="VARCHAR" property="buyOrderId" />
+    <result column="func_use_state" jdbcType="CHAR" property="funcUseState" />
+    <result column="func_is_long_term" jdbcType="CHAR" property="funcIsLongTerm" />
+    <result column="func_expiration_time" jdbcType="TIMESTAMP" property="funcExpirationTime" />
+    <result column="operator_id" jdbcType="VARCHAR" property="operatorId" />
+    <result column="create_at" jdbcType="TIMESTAMP" property="createAt" />
+    <result column="update_at" jdbcType="TIMESTAMP" property="updateAt" />
+  </resultMap>
+</mapper>

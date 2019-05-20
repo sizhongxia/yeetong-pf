@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yeetong.rpc.service.dao.zn.SmartCultureFarmMapAreaStyleMapper">
+  <resultMap id="BaseResultMap" type="org.yeetong.rpc.service.model.SmartCultureFarmMapAreaStyle">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="area_id" jdbcType="VARCHAR" property="areaId" />
+    <result column="farm_id" jdbcType="VARCHAR" property="farmId" />
+    <result column="area_name" jdbcType="VARCHAR" property="areaName" />
+    <result column="border_color" jdbcType="VARCHAR" property="borderColor" />
+    <result column="fill_color" jdbcType="VARCHAR" property="fillColor" />
+    <result column="fill_opacity" jdbcType="DECIMAL" property="fillOpacity" />
+    <result column="create_at" jdbcType="TIMESTAMP" property="createAt" />
+    <result column="update_at" jdbcType="TIMESTAMP" property="updateAt" />
+  </resultMap>
+</mapper>

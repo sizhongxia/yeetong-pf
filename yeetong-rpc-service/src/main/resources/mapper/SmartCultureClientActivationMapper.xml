@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yeetong.rpc.service.dao.zn.SmartCultureClientActivationMapper">
+  <resultMap id="BaseResultMap" type="org.yeetong.rpc.service.model.SmartCultureClientActivation">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="activation_id" jdbcType="VARCHAR" property="activationId" />
+    <result column="farm_id" jdbcType="VARCHAR" property="farmId" />
+    <result column="farm_name" jdbcType="VARCHAR" property="farmName" />
+    <result column="client_type" jdbcType="CHAR" property="clientType" />
+    <result column="activation_status" jdbcType="INTEGER" property="activationStatus" />
+    <result column="activation_date" jdbcType="TIMESTAMP" property="activationDate" />
+    <result column="win_mac" jdbcType="VARCHAR" property="winMac" />
+    <result column="change_count" jdbcType="INTEGER" property="changeCount" />
+    <result column="remote_time" jdbcType="TIMESTAMP" property="remoteTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="last_time" jdbcType="TIMESTAMP" property="lastTime" />
+    <result column="create_at" jdbcType="TIMESTAMP" property="createAt" />
+    <result column="update_at" jdbcType="TIMESTAMP" property="updateAt" />
+    <result column="remote_connection_str" jdbcType="LONGVARCHAR" property="remoteConnectionStr" />
+  </resultMap>
+</mapper>
