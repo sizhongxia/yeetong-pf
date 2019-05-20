@@ -1,8 +1,8 @@
 package org.yeetong.rpc.service.service.impl;
 
-import org.yeetong.rpc.service.dao.todo.TdUserMapper;
-import org.yeetong.rpc.service.model.TdUser;
-import org.yeetong.rpc.service.service.TdUserService;
+import org.yeetong.rpc.service.dao.todo.TdPlanMapper;
+import org.yeetong.rpc.service.model.TdPlan;
+import org.yeetong.rpc.service.service.TdPlanService;
 import org.yeetong.rpc.service.core.AbstractService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,8 +15,8 @@ import javax.annotation.Resource;
  */
 @Service
 @Transactional("todoTransationManager")
-public class TdUserServiceImpl extends AbstractService<TdUser> implements TdUserService {
+public class TdPlanServiceImpl extends AbstractService<TdPlan> implements TdPlanService {
     @Resource
-    private TdUserMapper tdUserMapper;
+    private TdPlanMapper tdPlanMapper;
 
 }

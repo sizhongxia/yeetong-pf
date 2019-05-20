@@ -18,14 +18,14 @@ import com.alibaba.druid.pool.DruidDataSource;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @Configuration
-@MapperScan(basePackages = "org.yeetong.rpc.service.dao.yeetongdb", sqlSessionFactoryRef = "yeetongdbSqlSessionTemplate")
-public class YeeTongDbDataSourceConfig {
+@MapperScan(basePackages = "org.yeetong.rpc.service.dao.yt", sqlSessionFactoryRef = "ytSqlSessionTemplate")
+public class YtDataSourceConfig {
 
-	@Value("${spring.datasource.yeetongdb.url}")
+	@Value("${spring.datasource.yt.url}")
 	private String url;
-	@Value("${spring.datasource.yeetongdb.username}")
+	@Value("${spring.datasource.yt.username}")
 	private String user;
-	@Value("${spring.datasource.yeetongdb.password}")
+	@Value("${spring.datasource.yt.password}")
 	private String password;
 	@Value("${spring.datasource.driver-class-name}")
 	private String driverClass;
@@ -47,8 +47,8 @@ public class YeeTongDbDataSourceConfig {
 	 * 
 	 * @return
 	 */
-	@Bean(name = "yeetongdbDataSource")
-	@ConfigurationProperties(prefix = "spring.datasource.yeetongdb")
+	@Bean(name = "ytDataSource")
+	@ConfigurationProperties(prefix = "spring.datasource.yt")
 	public DataSource setDataSource() {
 		// 使用druid 则这样注入 dataSource，不需要则直接 DataSourceBuilder.create().build()
 		DruidDataSource dataSource = new DruidDataSource();
@@ -74,7 +74,7 @@ public class YeeTongDbDataSourceConfig {
 	 * 
 	 * @return
 	 */
-	@Bean(name = "yeetongdbTransationManager")
+	@Bean(name = "ytTransationManager")
 	public DataSourceTransactionManager setTransactionManager() {
 		return new DataSourceTransactionManager(setDataSource());
 	}
@@ -85,7 +85,7 @@ public class YeeTongDbDataSourceConfig {
 	 * @return
 	 * @throws Exception
 	 */
-	@Bean(name = "yeetongdbSqlSessionTemplate")
+	@Bean(name = "ytSqlSessionTemplate")
 	public SqlSessionFactory setSqlSessionFactory() throws Exception {
 		final SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
 		bean.setDataSource(setDataSource());

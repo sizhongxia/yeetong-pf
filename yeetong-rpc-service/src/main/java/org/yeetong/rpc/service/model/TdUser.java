@@ -9,7 +9,7 @@ public class TdUser {
      * 主键
      */
     @Id
-    private Integer id;
+    private Long id;
 
     /**
      * 记录ID
@@ -81,7 +81,7 @@ public class TdUser {
      *
      * @return id - 主键
      */
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -90,7 +90,7 @@ public class TdUser {
      *
      * @param id 主键
      */
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

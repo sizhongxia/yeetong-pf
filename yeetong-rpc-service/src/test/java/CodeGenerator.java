@@ -55,7 +55,11 @@ public class CodeGenerator {
 	private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());// @date
 
 	public static void main(String[] args) {
-		genCodeByCustomModelName("td_user", "TdUser", "yeetongdb");
+		genCodeByCustomModelName("td_plan", "TdPlan", "todo");
+		genCodeByCustomModelName("td_token", "TdToken", "todo");
+		genCodeByCustomModelName("td_user", "TdUser", "todo");
+		genCodeByCustomModelName("td_user_like", "TdUserLike", "todo");
+		genCodeByCustomModelName("td_user_wx", "TdUserWx", "todo");
 	}
 
 	/**
